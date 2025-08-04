@@ -1,0 +1,259 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #d9f9f9;
+  padding-top: 90px;
+}
+header {
+  background-color: #001f7f;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  padding: 8px 20px;
+  border-bottom: 6px solid #ff8c00;
+  border-top: 6px solid #ff8c00;
+}
+.header-text {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+.header-text h1 {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+header img {
+  height: 70px;
+  width: 70px;
+}
+.black-bar {
+  background: black;
+  color: white;
+  padding: 6px 24px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+.top-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  background: white;
+  border-top: 5px solid orange;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+.logo {
+  height: 50px;
+}
+.vlab-logo {
+  height: 40px;
+}
+.top-text {
+  flex-grow: 1;
+  text-align: center;
+  font-size: 18px;
+  color: #297bb8;
+}
+.top-buttons {
+  display: flex;
+  gap: 10px;
+}
+.top-btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.top-btn:hover {
+  background: #0056b3;
+}
+
+.simulation-container {
+  max-width: 1600px;
+  min-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #f1d7c5;
+  border-radius: 8px;
+  position: relative;
+}
+.instruction-wrapper {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+}
+.instruction-btn {
+  background: #38b04a;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+}
+.instruction-btn:hover {
+  background: #2e8f3a;
+}
+.instruction-popup {
+  display: none;
+  position: absolute;
+  top: 45px;
+  right: 0;
+  width: 300px;
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 3000;
+}
+.instruction-wrapper:hover .instruction-popup {
+  display: block;
+}
+.instruction-popup img {
+  width: 100%;
+  margin-top: 10px;
+}
+.image-bar {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  background: #ffe0cc;
+  border-radius: 10px;
+  margin-top: 40px;
+}
+.drag-img {
+  position: absolute;
+  width: 100px;
+  height: auto;
+  cursor: grab;
+}
+#box {
+  margin-top: 50px;
+  margin-left: 25px;
+}
+#sensor-img {
+  top: 150px;
+  left: 300px;
+}
+#aurdino-img {
+  top: 220px;
+  left: 600px;
+  transform: rotate(90deg);
+}
+.endpoint-label {
+  font-size: 10px;
+  color: #333;
+  background: rgba(255,255,255,0.8);
+  padding: 1px 3px;
+  border-radius: 3px;
+  border: 1px solid #999;
+}
+
+.graph-svg {
+  position: absolute;
+  top: 150px;
+  left: 650px;
+  width: 420px;
+  height: 200px;
+  background: #eef2d2;
+  border: 2px solid #444;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  overflow: hidden;
+  margin-left: 380px;
+}
+
+.popup {
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 30px 40px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.popup-content {
+  font-size: 18px;
+  font-weight: bold;
+}
+.hidden {
+  display: none;
+}
+.button-bar {
+  margin-top: 30px;
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.round-btn {
+  background: #38b04a;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+}
+.round-btn:hover {
+  background: #2e8f3a;
+}
+#waveform-options {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  gap: 15px;
+}
+
+#waveform-options .round-btn {
+  padding: 8px 18px;
+  border-radius: 20px;
+  background-color: #38a;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#waveform-options .round-btn:hover {
+  background-color: #2a6aaf;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #001d5e;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+}

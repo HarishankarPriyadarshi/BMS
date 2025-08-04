@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Virtual Labs – EMG Simulation</title>
+  <link rel="icon" href="https://bmi-iitr.vlabs.ac.in/img/favicon.ico" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fefeda;
+    }
+
+    /* Top Navbar */
+    .navbar {
+      background-color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8px 16px;
+      border-bottom: 3px solid orange;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    .title {
+      color: #0077cc;
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    .actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .rate-btn, .bug-btn {
+      background-color: #2196F3;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      padding: 6px 12px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .star-rating {
+      color: gold;
+      font-size: 16px;
+    }
+
+    /* Main Content */
+    .content {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    h2 {
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    .sim-title {
+      font-size: 22px;
+      margin-bottom: 40px;
+    }
+
+    .button-group {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .button-group button {
+      background-color: #337ab7;
+      color: white;
+      border: none;
+      padding: 14px 24px;
+      font-size: 18px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .button-group button:hover {
+      background-color: #286090;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="logo">
+      <img src="https://www.vlab.co.in/images/logo.jpg" alt="Virtual Labs Logo">
+      <div class="title">Monitoring of Electromyogram (EMG) using Sensor and Arduino</div>
+    </div>
+    <div class="actions">
+      <div class="star-rating">★★★★★</div>
+      <button class="rate-btn">Rate Me</button>
+      <button class="bug-btn">Report a Bug</button>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="content">
+    <h2>Study of Monitoring of Electromyogram (EMG) for Different Cases</h2>
+    <div class="sim-title">Simulation</div>
+    <div class="button-group">
+      <button onclick="location.href='EMG Contraction'">CONTRACTION</button>
+      <button onclick="location.href='EMG Gait'">GAIT</button>
+    </div>
+  </div>
+</body>
+</html>

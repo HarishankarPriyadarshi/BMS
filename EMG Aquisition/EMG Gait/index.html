@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Virtual Labs – EMG Simulation</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jsPlumb/2.13.1/js/jsplumb.min.js"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- Top Banner -->
+  <div class="top-banner">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBvuynxo1rRFlcxIz18uTF3eDcxLv9bHv1qA&s" alt="IIT Roorkee Logo" class="logo" />
+    <img src="https://www.vlab.co.in/images/logo.jpg" alt="Virtual Labs Logo" class="logo vlab-logo" />
+    <h2 class="top-text">Acquisition of EMG Signal using Biomedical Equipment</h2>
+    <div class="top-buttons">
+      <button class="top-btn">Rate Me</button>
+      <button class="top-btn">Report a Bug</button>
+    </div>
+  </div>
+
+<header>
+  <div><img src="https://bmi-iitr.vlabs.ac.in/exp/augmented-leads/simulation/Lead%20aVF/Indian_Institute_of_Technology_Roorkee_logo.png" alt="IIT Roorkee logo"></div>
+  <div class="header-text"><h1>Virtual Labs IIT Roorkee<br />Biomedical Laboratory</h1></div>
+</header>
+
+<div class="black-bar">EMG (GAIT) Test with Arduino and EMG Sensor</div>
+
+  <!-- Simulation Container -->
+  <main class="simulation-container">
+    <div class="instruction-wrapper">
+      <button class="instruction-btn">INSTRUCTIONS</button>
+      <div class="instruction-popup">
+        <ol>
+          <b>STEP 1 :</b> 1. Connect the three electrodes E1,E2 and E3 to common point C of EMG sensor.<br />
+          2. Connect the EMG sensor points G and S to the V and Ao points of Arduino respectively.<br />
+          3. Connect U point of Arduino to graph Container.<br />
+          <img src="instruction.gait.png" alt="Instructions" /> <br />
+          <b>STEP 2 :</b> Click on check button to check for Correct Connections.<br />
+          <b>STEP 3 :</b> If Connections are not correct click on reset button to start connections from starting.<br />
+          <b>STEP 4 :</b> If Connections are correct then click on the Waveform Button for the output signals.<br />
+          Gait button will appear, to get output signal click on button.<br />
+          <b>STEP 5 :</b> Click on the print button to save the observation.<br />
+        </ol>
+        
+      </div>
+    </div>
+
+    <!-- Simulation Images & Graph -->
+    <div id="image-bar" class="image-bar">
+      <img id="box" src="subject.png" class="drag-img" style="height: 420px; width: 280px;" alt="Subject" />
+      <img id="sensor-img" src="sensor.png" class="drag-img" style="height: 170px ; width:auto" alt="Sensor" />
+      <img id="aurdino-img" src="aurdino.webp" class="drag-img" style="height: 170px; width: 260px;" alt="Arduino" />
+
+      <!-- Updated: Canvas-Based EMG Graph -->
+      <div id="graph" class="graph-svg">
+        <canvas id="emgCanvas" width="400" height="180"></canvas>
+
+      </div>
+    </div>
+
+    <!-- Feedback Popup -->
+    <div id="popup" class="popup hidden">
+      <div id="popupMessage" class="popup-content"></div>
+    </div>
+
+    <!-- Buttons -->
+    <div class="button-bar">
+      <button class="round-btn" id="check-btn">CHECK</button>
+      <button class="round-btn" id="restart-btn">RESTART</button>
+      <button class="round-btn" id="waveform-btn">WAVEFORM</button>
+      <button class="round-btn" id="print-btn">PRINT</button>
+    </div>
+    <!-- Waveform Options (Initially Hidden) -->
+    <div id="waveform-options" class="button-bar hidden"></div>
+    
+
+  </main>
+
+  <footer>&copy; Copyright 2021 Virtual Labs, IIT Roorkee</footer>
+</body>
+</html>
